@@ -8,8 +8,6 @@ hubos = []
 
 row_line = []
 col_line = []
-lcrs_line = []          # [0][0] [1][1] [2][2]
-rcrs_line = []          # [0][2] [1][1] [2][0]
 # 가로 집합을 먼저 만들어 볼까
 
 left = set()
@@ -38,7 +36,6 @@ unique_teams = set()  # 중복 팀 저장을 위한 집합
 for hubo in hubos:
     # 정확히 2개의 문자로 이루어진 라인인 경우
     if len(hubo) == 2:
-        # 집합(set)은 순서가 없고 mutable하므로, 중복 체크를 위해 정렬된 tuple로 변환
         team = tuple(sorted(hubo))
         
         if team not in unique_teams:
