@@ -13,9 +13,8 @@ tmp = []
 for i in range(N):
     for j in range(i+1, N):
         for k in range(j+1, N):
-            if i < j < k:
-                if A[i] <= A[j] <= A[k]:
-                    tmp.append((i,j,k))
-                    ans += 1
+            if i < j < k and A[i] <= A[j] <= A[k]:
+                tmp.append((i,j,k))
+                ans += 1
 
 print(ans)
